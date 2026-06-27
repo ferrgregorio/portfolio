@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando Gregório — Backend & Full Stack Developer</title>
+  <meta name="description"
+    content="Desenvolvedor Backend e Full Stack especializado em Node.js, React, SQL Server e infraestrutura. Construindo sistemas internos robustos e APIs escaláveis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">fg<span class="accent">.</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">sobre</a>
+        <a href="#stack">stack</a>
+        <a href="#projetos">projetos</a>
+        <a href="#experiencia">experiência</a>
+        <a href="#contato" class="nav-cta">contato</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#sobre" class="mobile-link">sobre</a>
+      <a href="#stack" class="mobile-link">stack</a>
+      <a href="#projetos" class="mobile-link">projetos</a>
+      <a href="#experiencia" class="mobile-link">experiência</a>
+      <a href="#contato" class="mobile-link">contato</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">disponível para projetos e oportunidades</p>
+          <h1 class="hero-name">Fernando<br />Gregório</h1>
+          <div class="hero-terminal" aria-label="Apresentação em formato de terminal">
+            <span class="terminal-prompt">$</span>
+            <span class="terminal-text" id="terminal-text"></span>
+            <span class="terminal-cursor" aria-hidden="true">_</span>
+          </div>
+          <p class="hero-desc">
+            Desenvolvedor backend e full stack com foco em sistemas internos robustos,
+            APIs REST e infraestrutura. Transformo processos manuais em software confiável.
+          </p>
+          <div class="hero-actions">
+            <a href="#projetos" class="btn-primary">ver projetos</a>
+            <a href="#contato" class="btn-ghost">entrar em contato</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/ferrgregorio" target="_blank" rel="noopener"
+              aria-label="GitHub de Fernando Gregório">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fernando-oliveira-greg%C3%B3rio-0837732b5/" target="_blank"
+              rel="noopener" aria-label="LinkedIn de Fernando Gregório">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="avatar-placeholder">
+            <span>FG</span>
+          </div>
+          <div class="hero-badge badge-1">Node.js</div>
+          <div class="hero-badge badge-2">React</div>
+          <div class="hero-badge badge-3">SQL Server</div>
+          <div class="hero-badge badge-4">Docker</div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-label">sobre</div>
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <h2>Construo sistemas que as pessoas realmente usam.</h2>
+            <p>
+              Sou desenvolvedor backend e full stack com atuação no setor industrial,
+              onde desenvolvo e mantenho soluções internas que impactam operações reais do dia a dia.
+              Meu trabalho vai de APIs Node.js rodando em produção até deploys em servidores Windows e Linux,
+              passando por integrações com Active Directory, SQL Server e ambientes Microsoft 365.
+            </p>
+            <p>
+              Gosto de problemas concretos: processos manuais que podem virar software, planilhas que podem
+              virar sistemas, e sistemas legados que podem ser modernizados sem parar a operação.
+              Tenho experiência com o ciclo completo — levantamento de requisito, desenvolvimento, deploy e suporte.
+            </p>
+            <p>
+              Estou aberto a oportunidades como desenvolvedor backend/full stack e a projetos freelance
+              que envolvam sistemas web, APIs ou automações internas.
+            </p>
+          </div>
+          <div class="sobre-stats">
+            <div class="stat-card">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">anos em dev</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">2</span>
+              <span class="stat-label">sistemas em produção</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">servidores gerenciados</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">M365</span>
+              <span class="stat-label">migração completa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section section-alt" id="stack">
+      <div class="container">
+        <div class="section-label">stack</div>
+        <h2 class="section-title">Tecnologias que uso no dia a dia</h2>
+
+        <div class="stack-groups">
+
+          <div class="stack-group">
+            <h3 class="stack-group-title">Backend</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path fill="#83CD29"
+                    d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L15.301 30.334C12.546 31.917 11 34.65 11 37.819v51.Mount11c0 3.168 1.546 5.901 4.301 7.483l44.152 25.605c2.781 1.584 6.386 1.584 9.205 0l44.097-25.605c2.781-1.582 4.245-4.315 4.245-7.483V37.819c.001-3.169-1.463-5.902-4.229-7.485z" />
+                  <path fill="#404137"
+                    d="M64.134 20.367l-.026.038v88.03c.613 0 1.214-.154 1.765-.461l44.89-26.038c1.093-.634 1.801-1.811 1.801-3.104V38.168c0-.904-.335-1.728-.939-2.362L64.134 20.367z" />
+                  <path fill="#35A8E0"
+                    d="M49.927 64.897L11.707 42.434c-.622.641-.959 1.471-.959 2.381V88.83c0 1.293.708 2.47 1.801 3.104l44.891 26.038c.551.307 1.152.461 1.766.461V70.422L49.927 64.897z" />
+                </svg>
+                <span>Node.js</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path
+                    d="M40.53 77.82V50.74H36.45v3.51h-.09a6.73 6.73 0 0 0-2.44-2.89 7 7 0 0 0-4-1.09 8 8 0 0 0-6.38 2.89Q21 56.05 21 61.26t2.56 8.09a8.14 8.14 0 0 0 6.38 2.84 6.85 6.85 0 0 0 3.93-1.07 6.73 6.73 0 0 0 2.44-2.89h.07v3.24q0 3-1.09 4.59a4.38 4.38 0 0 1-3.91 1.59 5.19 5.19 0 0 1-3-.84 4.14 4.14 0 0 1-1.66-2.38L22.65 76a8.88 8.88 0 0 0 3.25 4.37 10.09 10.09 0 0 0 5.9 1.65q5.17 0 7.87-2.71t2.86-7.49zm-8-4.65a4.74 4.74 0 0 1-3.88 1.69 4.74 4.74 0 0 1-3.88-1.69Q23.48 71.47 23.48 61.26t1.31-8.11A4.74 4.74 0 0 1 28.67 51.46a4.74 4.74 0 0 1 3.88 1.69q1.29 1.69 1.29 8.11t-1.31 8.11zm19.55 4.65V61.38h.09l7.54 16.44h3.81l7.51-16.44h.09v16.44h4.08V50.74h-4.6l-8.22 18.1h-.1l-8.22-18.1h-4.56v27.08zm40.97.43a9.32 9.32 0 0 0 7.34-3 11.86 11.86 0 0 0 2.7-8.17 11.86 11.86 0 0 0-2.7-8.17 9.32 9.32 0 0 0-7.34-3 9.32 9.32 0 0 0-7.34 3 11.86 11.86 0 0 0-2.7 8.17 11.86 11.86 0 0 0 2.7 8.17 9.32 9.32 0 0 0 7.34 3zm0-3.52a4.92 4.92 0 0 1-4-1.82q-1.47-1.82-1.47-5.83t1.47-5.83a4.92 4.92 0 0 1 4-1.82 4.92 4.92 0 0 1 4 1.82q1.47 1.82 1.47 5.83t-1.47 5.83a4.92 4.92 0 0 1-4 1.82zm21.98 3.09V61.03h.09l11.13 16.79h4.08V50.74h-4.08V67.53h-.09L115.03 50.74h-4.08v27.08z"
+                    fill="#026E00" />
+                </svg>
+                <span>npm / pnpm</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path d="M9.032 0L9 27.656l18.708 10.773V52.27L0 36.427V9.032zm0 0" fill="#000" />
+                  <path d="M64 0L45.317 10.773v21.504L64 21.504l18.683 10.773V10.773zm0 0" fill="#000" />
+                  <path d="M118.968 0l.032 27.656-18.696 10.773V52.27L128 36.427V9.032zm0 0" fill="#000" />
+                  <path d="M9.032 128l-.032-27.656 18.708-10.773V75.73L0 91.573V118.968zm0 0" fill="#000" />
+                  <path d="M64 128l18.683-10.773V95.723L64 106.496l-18.683-10.773v21.504zm0 0" fill="#000" />
+                  <path d="M118.968 128l.032-27.656-18.696-10.773V75.73L128 91.573V118.968zm0 0" fill="#000" />
+                  <path
+                    d="M27.671 95.719v-21.47L9 64l18.671-10.25v-21.5L0 45.998V82zm0 0M64 96.004L45.317 85.28v-42.56L64 53.444l18.683-10.724v42.56zm0 0M100.329 95.719V45.998L72.658 32.25v21.5L91.329 64l-18.671 10.249v21.47zm0 0"
+                    fill="#000" />
+                </svg>
+                <span>Express.js</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text">PM2</div>
+                <span>PM2</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text" style="font-size: 10px;">JWT</div>
+                <span>JWT / Auth</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text">REST</div>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-group-title">Frontend</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path fill="#61DAFB"
+                    d="M64 35.34a28.66 28.66 0 1 0 0 57.32 28.66 28.66 0 0 0 0-57.32zm0 8.66a20 20 0 1 1 0 40 20 20 0 0 1 0-40z" />
+                  <path fill="#61DAFB"
+                    d="M64 0C46.327 0 32 7.163 32 16 32 24.837 46.327 32 64 32s32-7.163 32-16C96 7.163 81.673 0 64 0zm0 8c14.359 0 24 5.373 24 8s-9.641 8-24 8-24-5.373-24-8 9.641-8 24-8z"
+                    opacity=".3" />
+                </svg>
+                <span>React</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path
+                    d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.218 8.352 4.746 12.207 8.65C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.218-8.347-4.746-12.207-8.65-6.27-6.377-13.531-13.748-29.394-13.748zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.218 8.352 4.746 12.207 8.65 6.274 6.372 13.536 13.748 29.395 13.748 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.218-8.347-4.746-12.207-8.65C55.128 71.375 47.868 64 32.004 64z"
+                    fill="#06B6D4" />
+                </svg>
+                <span>Tailwind</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path d="M0 0h54.43v54.43H0zm73.57 0H128v54.43H73.57zM0 73.57h54.43V128H0zm73.57 0H128V128H73.57z"
+                    fill="#41b883" />
+                </svg>
+                <span>Vite</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text" style="color: #3178c6;">TS</div>
+                <span>TypeScript</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text">HTML</div>
+                <span>HTML5 / CSS3</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text">JS</div>
+                <span>Vanilla JS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-group-title">Banco de dados</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <div class="stack-icon-text" style="color: #CC2927; font-size: 9px;">SQL</div>
+                <span>SQL Server</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path fill="#336791"
+                    d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287C101.001 8.436 82.631 14.7 82.331 14.851l-.09.018c-1.863-.388-3.96-.621-6.337-.661C71.42 14.121 68.077 15.25 65.32 17.03c0 0-30.05-12.371-28.663 15.525.296 5.925 8.504 44.818 18.287 33.04 3.576-4.302 7.032-7.937 7.032-7.937 1.716 1.143 3.767 1.726 5.919 1.519l.165-.14c-.051.521-.03 1.031.062 1.662-2.37 2.648-1.674 3.113-6.407 4.093-4.807.991-1.98 2.754-.14 3.215 2.231.56 7.393.943 10.875-2.474l-.139.558c.924.743 1.576 4.829 1.47 8.538-.105 3.708-.176 6.258.533 8.258.709 2 1.491 6.501 7.849 5.16 5.294-1.132 8.04-4.06 8.432-8.944z" />
+                </svg>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path
+                    d="M116.948 99.469c-.43 1.14-.959 2.207-1.562 3.2-.825 1.392-1.581 2.355-2.248 2.891-.899.825-1.858 1.248-2.874 1.272-.734 0-1.62-.21-2.644-.635-1.028-.421-1.974-.632-2.842-.632-1.01 0-2.104.211-3.29.632-1.19.424-2.148.647-2.885.67-0.97.041-1.948-.393-2.94-1.296-.71-.617-1.504-1.613-2.376-2.987-1.02-1.468-1.855-3.176-2.507-5.127-.698-2.1-1.047-4.135-1.047-6.109 0-2.258.488-4.205 1.466-5.833.768-1.296 1.796-2.319 3.086-3.068 1.293-.75 2.688-1.13 4.188-1.156.83 0 1.913.256 3.258.759 1.341.505 2.202.762 2.578.762.284 0 1.247-.3 2.882-.899 1.547-.558 2.852-.789 3.92-.697 2.899.23 5.079 1.367 6.527 3.415-2.592 1.57-3.875 3.769-3.85 6.589.024 2.197.82 4.025 2.382 5.476a7.827 7.827 0 0 0 2.38 1.557c-.19.553-.391 1.082-.599 1.592zM91.787 7.578c0 1.724-.63 3.334-1.886 4.82-1.516 1.773-3.35 2.797-5.338 2.636-.025-.206-.04-.424-.04-.643 0-1.654.72-3.426 1.999-4.875.638-.729 1.449-1.336 2.43-1.822.977-.483 1.9-.748 2.77-.79.025.225.065.449.065.674z" />
+                </svg>
+                <span>Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <h3 class="stack-group-title">Infra & DevOps</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path fill="#2496ED"
+                    d="M124.8 52.1c-4.3 0-7.1.9-9.6 2.4-.9-4.7-3.5-8.8-7.9-12.4l-1.6-1.2-1.3 1.5c-2.5 2.9-3.2 7.8-2.9 11.5.3 2.7 1 5.3 2.7 7.5-1.3.7-3.9 1.8-7.3 1.7H3.1l-.3 1.5c-1 6.2-.8 25.5 12.6 40.4 10.4 11.5 26 17.3 46.4 17.3 44.2 0 76.9-20.3 92.2-57.3 6 .1 18.9.1 25.4-12.4.2-.2.6-1.1.7-1.4l.4-1.4-1.5-.8c-2.9-1.5-9.6-2.1-15.2-.7z" />
+                </svg>
+                <span>Docker</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path fill="#F05032"
+                    d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 0 1-13.683 0 9.677 9.677 0 0 1-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 0 1 2.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.785-3.778-9.906 0-13.683a9.65 9.65 0 0 1 3.167-2.11V47.333a9.581 9.581 0 0 1-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 0 0 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 0 0-.001-11.501z" />
+                </svg>
+                <span>Git</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text" style="font-size: 10px;">IIS</div>
+                <span>IIS / Windows</span>
+              </div>
+              <div class="stack-item">
+                <svg class="stack-icon" viewBox="0 0 128 128" aria-hidden="true">
+                  <path d="M126.994 63.504a62.994 62.994 0 1 0-62.994 62.994 62.994 62.994 0 0 0 62.994-62.994z"
+                    fill="#FCC624" />
+                  <path
+                    d="M66.428 12.108v1.866l7.354 14.016-1.242 1.866-6.112-2.484v2.484l2.484 6.112v-2.484l1.242-2.484 2.484 1.242v3.726l1.242 2.484-1.242 4.968-3.726.621v2.484l2.484 4.347-1.242 3.726L68.29 52.98l-2.484-1.242v4.347l1.242 4.968-.621 4.347-1.863 1.242v-2.484l-1.242-3.105v2.484l-1.242 2.484v-1.863l-1.863 2.484v3.105l2.484 3.726v2.484l-2.484 1.863v3.726l-4.347-1.242-1.863-4.347v-3.726l1.863-1.242-1.863-1.863-3.726 1.863-1.242 4.968v2.484l-3.105 1.863v3.726l-1.863 2.484v1.242l2.484.621h3.726l2.484-1.863 1.863.621 3.726-.621.621-2.484h1.242l1.242 3.726v1.863h1.863v-1.863l1.242-3.726v2.484l4.347 1.863 1.863-1.242v-3.726l-1.863-2.484 1.242-1.242 3.726 1.863v3.726l-1.863 2.484v3.726l-3.726 1.242-.621 2.484h-3.726l-1.242-1.863h-2.484l-1.863 1.863-4.347-.621-2.484-3.105v-1.863l-1.242.621-1.863 3.726v2.484l1.242 1.863-1.863 4.347 4.347 1.863 3.105-1.863 3.726.621v2.484l3.105 1.863 1.863-1.242 2.484 1.863 3.726-1.863.621-3.726 4.347-1.242.621-3.726 3.726.621 1.863-1.863.621-3.726 3.105.621 1.242 3.726 2.484 1.242 1.863-1.242-.621-4.347 1.863-1.863 3.726.621 1.863-1.863v-3.726l-3.726-1.863v-2.484l3.105-1.242v-3.726l-1.863-1.863h-3.726l-1.242-2.484 1.863-1.863 4.347.621.621 3.726 3.726.621 1.863-1.863V64.43l-1.863-1.863-3.726.621-.621-3.726-3.726-1.242v-3.726l3.105-1.242 1.863 1.863h3.726v-3.726l-2.484-1.863v-3.726l-2.484-1.863-1.863 1.863-1.863-1.242v-3.726l3.726-1.863v-3.726l-1.863-1.863-3.726.621-1.242-3.726-3.105-.621v-3.726l1.863-2.484 1.242-4.347-1.863-3.726-3.105-.621v-3.726l-4.968-1.863z"
+                    fill="#000" />
+                </svg>
+                <span>Linux</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text" style="font-size: 9px; color: #0078d4;">PS</div>
+                <span>PowerShell</span>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon-text" style="color: #0078d4; font-size: 9px;">M365</div>
+                <span>Microsoft 365</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-label">projetos</div>
+        <h2 class="section-title">Sistemas construídos e entregues</h2>
+
+        <div class="projects-grid">
+
+          <!-- Magius Keeper -->
+          <article class="project-card project-featured">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-tag tag-featured">em produção</span>
+                <span class="project-tag">sistema interno</span>
+              </div>
+              <div class="project-links">
+                <a href="https://keeper-demo-frontend.onrender.com" target="_blank" rel="noopener" class="project-link"
+                  aria-label="Demo ao vivo do Magius Keeper">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  demo
+                </a>
+              </div>
+            </div>
+            <div class="project-mockup keeper-mockup" aria-hidden="true">
+              <div class="mockup-bar">
+                <span></span><span></span><span></span>
+                <div class="mockup-url">keeper.magius.com.br</div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-sidebar">
+                  <div class="mockup-nav-item active">Dashboard</div>
+                  <div class="mockup-nav-item">Equipamentos</div>
+                  <div class="mockup-nav-item">Usuários</div>
+                  <div class="mockup-nav-item">Assinaturas</div>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-stat-row">
+                    <div class="mockup-stat"><span class="ms-num">124</span><span class="ms-label">Equipamentos</span>
+                    </div>
+                    <div class="mockup-stat"><span class="ms-num">38</span><span class="ms-label">Alocados</span></div>
+                    <div class="mockup-stat"><span class="ms-num">4</span><span class="ms-label">Usuários</span></div>
+                  </div>
+                  <div class="mockup-table-row"><span class="mtr-dot active"></span>Notebook Dell — Victor Claro<div
+                      class="mtr-badge signed">assinado</div>
+                  </div>
+                  <div class="mockup-table-row"><span class="mtr-dot"></span>Monitor LG — TI<div
+                      class="mtr-badge pending">pendente</div>
+                  </div>
+                  <div class="mockup-table-row"><span class="mtr-dot active"></span>Mouse Logitech — Vitor Fiorin<div
+                      class="mtr-badge signed">assinado</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Magius Keeper</h3>
+              <p>
+                Sistema de gestão de equipamentos de TI com fluxo completo de alocação,
+                assinatura digital de termos de responsabilidade, upload de fotos e controle
+                de devoluções. Usado diariamente pela equipe de TI da Magius Metalúrgica.
+              </p>
+              <div class="project-stack">
+                <span>Node.js</span><span>Express</span><span>SQL Server</span>
+                <span>React</span><span>Active Directory</span><span>PWA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- OmniView -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-tag tag-frontend">front-end</span>
+                <span class="project-tag">WMS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ferrgregorio" target="_blank" rel="noopener" class="project-link"
+                  aria-label="Código fonte do OmniView">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  código
+                </a>
+              </div>
+            </div>
+            <div class="project-mockup omniview-mockup" aria-hidden="true">
+              <div class="mockup-bar">
+                <span></span><span></span><span></span>
+                <div class="mockup-url">omniview-logistics</div>
+              </div>
+              <div class="mockup-body omni-body">
+                <div class="omni-header">
+                  <div class="omni-title">OmniView Logistics</div>
+                  <div class="omni-actions">
+                    <div class="omni-btn">+ Entrada</div>
+                    <div class="omni-btn outline">Imprimir</div>
+                  </div>
+                </div>
+                <div class="kanban-cols">
+                  <div class="kanban-col">
+                    <div class="kanban-col-title">Estoque</div>
+                    <div class="kanban-card">Tinta Coral 3.6L<span>12 un</span></div>
+                    <div class="kanban-card">Thinner Premium<span>8 un</span></div>
+                  </div>
+                  <div class="kanban-col">
+                    <div class="kanban-col-title">Em uso</div>
+                    <div class="kanban-card warn">Verniz Brilho<span>3 un</span></div>
+                  </div>
+                  <div class="kanban-col">
+                    <div class="kanban-col-title">Reposição</div>
+                    <div class="kanban-card danger">Solvente<span>1 un</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>OmniView Logistics</h3>
+              <p>
+                Sistema de gestão de almoxarifado para o setor de pintura e acabamento.
+                Interface Kanban para controle de estoque, fila de impressão e etiquetas
+                térmicas 150×100mm. 100% front-end, sem dependências de servidor.
+              </p>
+              <div class="project-stack">
+                <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span>
+                <span>localStorage</span><span>Impressão térmica</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-more">
+          <p>Mais projetos em andamento — acompanhe no GitHub.</p>
+          <a href="https://github.com/ferrgregorio" target="_blank" rel="noopener" class="btn-ghost">ver GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section section-alt" id="experiencia">
+      <div class="container">
+        <div class="section-label">experiência</div>
+        <h2 class="section-title">Trajetória profissional</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Analista de TI — Desenvolvedor</h3>
+                  <p class="timeline-company">Magius Metalúrgica Industrial Ltda.</p>
+                </div>
+                <span class="timeline-date">atual</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Desenvolvimento e manutenção do Magius Keeper — sistema de inventário de TI com Node.js, Express e
+                  SQL Server</li>
+                <li>Construção do OmniView Logistics — WMS para almoxarifado com impressão de etiquetas térmicas</li>
+                <li>Migração de infraestrutura para Microsoft 365 SharePoint, incluindo comunicações e treinamento de
+                  usuários</li>
+                <li>Gerenciamento de 9 servidores Windows/Linux com automação via PowerShell</li>
+                <li>Configuração e administração de Active Directory, IIS e ambiente TSplus</li>
+                <li>Deploy de aplicações Node.js em produção com PM2 em servidor Linux</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot timeline-dot-past"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Suporte e Infraestrutura de TI</h3>
+                  <p class="timeline-company">Início na área de tecnologia</p>
+                </div>
+                <span class="timeline-date">anterior</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Suporte técnico e manutenção de hardware e software</li>
+                <li>Administração de redes e gerenciamento de usuários no Active Directory</li>
+                <li>Primeiro contato com desenvolvimento de scripts e automações internas</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-label">contato</div>
+        <div class="contato-grid">
+          <div class="contato-text">
+            <h2>Vamos conversar.</h2>
+            <p>
+              Estou aberto a oportunidades como desenvolvedor backend ou full stack,
+              e a projetos freelance de sistemas web e APIs.
+              Se tiver uma ideia ou uma vaga, manda mensagem.
+            </p>
+            <div class="contato-links">
+              <a href="mailto:ferroliveiragregorio@gmail.com" class="contato-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>ferroliveiragregorio@gmail.com</span>
+              </a>
+              <a href="https://github.com/ferrgregorio" target="_blank" rel="noopener" class="contato-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>github.com/ferrgregorio</span>
+              </a>
+              <a href="https://www.linkedin.com/in/fernando-oliveira-greg%C3%B3rio-0837732b5/" target="_blank"
+                rel="noopener" class="contato-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <form class="contato-form" id="contact-form" action="https://formspree.io/f/mnjkvnzl" method="POST">
+            <div class="form-group">
+              <label for="name">nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">e-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">mensagem</label>
+              <textarea id="message" name="message" rows="4" placeholder="Sua mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit" id="submit-btn">enviar mensagem</button>
+            <p class="form-note" id="form-msg" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Fernando Gregório</span>
+      <span class="footer-copy">Construído com HTML, CSS e JavaScript puro.</span>
+      <div class="footer-links">
+        <a href="https://github.com/ferrgregorio" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/fernando-oliveira-greg%C3%B3rio-0837732b5/" target="_blank" rel="noopener"
+          aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
